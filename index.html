@@ -32,15 +32,16 @@
 		     	     	               muted="muted"></video>
 		            	       <script>
   var video = document.getElementById('video');
-					       var select = document.getElementById('url-selector');
+	var select = document.getElementById('url-selector');
           select.addEventListener('change', function() {
         if (Hls.isSupported()) {
           var hls = new Hls();
           hls.loadSource(select.value);
           hls.attachMedia(video);
-		hls.on(Hls.Events.MANIFEST_PARSED,function() {
+	  hls.on(Hls.Events.MANIFEST_PARSED,function() {
 				video.play();
-		});
+	  });
+		 }
 	});
         
 		    </script>
