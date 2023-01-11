@@ -1,25 +1,8 @@
 
-<select id="url-selector">
-      <option value="https://cams.cdn-surfline.com/cdn-wc/wc-sharppark/chunklist.m3u8">sharp park</option>
-      <option value="https://cams.cdn-surfline.com/cdn-wc/wc-mavericks/chunklist.m3u8">mavericks</option>
-      <option value="https://example.com/playlist3.m3u8">Playlist 3</option>
-    </select>
 
-    <video id="video-player" controls></video>
 
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@0.13.2"></script>
-    <script>
-      var video = document.getElementById('video-player');
-      var select = document.getElementById('url-selector');
 
-      select.addEventListener('change', function() {
-        if (Hls.isSupported()) {
-          var hls = new Hls();
-          hls.loadSource(select.value);
-          hls.attachMedia(video);
-        }
-      });
-    </script>
+
 
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
@@ -37,12 +20,21 @@
       <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
           <!-- Or if you want a more recent canary version -->
 	       <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
-	             <video id="videotest"
+	             
+		
+<select id="url-selector">
+      <option value="https://cams.cdn-surfline.com/cdn-wc/wc-sharppark/chunklist.m3u8">sharp park</option>
+      <option value="https://cams.cdn-surfline.com/cdn-wc/wc-mavericks/chunklist.m3u8">mavericks</option>
+      <option value="https://example.com/playlist3.m3u8">Playlist 3</option>
+    </select>
+
+			<video id="videotest"
 		     	     	               muted="muted"></video>
 		            	       <script>
   var video = document.getElementById('video');
           if(Hls.isSupported()) {
 		  			      	        var hls = new Hls();
+		  var select = document.getElementById('url-selector');
 																	    hls.loadSource(select.value);
 																	    										    					    		        hls.attachMedia(video);
 																																																		    hls.on(Hls.Events.MANIFEST_PARSED,function() {
