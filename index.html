@@ -216,24 +216,3 @@
 	      	      	      	                     </script>
 
 
-<select id="url-selector">
-      <option value="https://cams.cdn-surfline.com/cdn-wc/wc-sharppark/chunklist.m3u8">sharp park</option>
-      <option value="https://cams.cdn-surfline.com/cdn-wc/wc-mavericks/chunklist.m3u8">mavericks</option>
-      <option value="https://example.com/playlist3.m3u8">Playlist 3</option>
-    </select>
-
-    <video id="video-player" controls></video>
-
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@0.13.2"></script>
-    <script>
-      var video = document.getElementById('video-player');
-      var select = document.getElementById('url-selector');
-
-      select.addEventListener('change', function() {
-        if (Hls.isSupported()) {
-          var hls = new Hls();
-          hls.loadSource(select.value);
-          hls.attachMedia(video);
-        }
-      });
-    </script>
